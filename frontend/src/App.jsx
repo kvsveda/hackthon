@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, AlertTriangle, UserPlus, HeartPulse, ShieldAlert, CheckCircle2, Trash2, Users, AlertOctagon } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api/patients';
+const API_URL = import.meta.env.VITE_API_URL || 'https://hackthon-ne3c.onrender.com/api/patients';
 
 function App() {
   const [patients, setPatients] = useState([]);
